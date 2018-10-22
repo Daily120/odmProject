@@ -6,7 +6,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          Hello
+         <div id="welcomeMessage">Hello</div>
+         <img src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" alt="sssss"/>
         </header>
       </div>
     );
