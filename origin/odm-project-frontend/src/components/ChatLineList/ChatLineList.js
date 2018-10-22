@@ -1,5 +1,4 @@
 import React from 'react';
-import './ChatLineList.css';
 import ChatLine from '../ChatLine/ChatLine';
 
 const ChatLineList = ({ chatList }) => {
