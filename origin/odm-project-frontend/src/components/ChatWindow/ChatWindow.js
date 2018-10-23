@@ -36,7 +36,7 @@ class ChatWindow extends Component {
         </div>
         <hr className="chatDivider messageBox" />
         <div className="newMessageZone">
-          <input placeholder="Message" className="newMessageInput"></input>
+          <input placeholder="  Write a message..." className="newMessageInput"></input>
           <button className="sendMessageButton">Send</button>
         </div>
       </div>

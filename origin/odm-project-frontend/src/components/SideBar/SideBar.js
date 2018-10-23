@@ -1,6 +1,6 @@
 import React from 'react';
 import './SideBar.css';
-import image from './img/asdf.jpg'
+import image from './img/asdf.jpg';
 import './animate.css';
 
 const bounce = () => {
@@ -14,8 +14,8 @@ const SideBar = () => {
     return (
         <div>
             <div>
-                <a class="mennenger" onMouseEnter={bounce} onMouseLeave={bounce} href="#">Mennenger</a>
-                <ul class="navigation">
+                <a className="mennenger" onMouseEnter={bounce} onMouseLeave={bounce} href="">Mennenger</a>
+                <ul className="navigation">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Donation</a></li>
                     <li><a href="#">Sign In</a></li>

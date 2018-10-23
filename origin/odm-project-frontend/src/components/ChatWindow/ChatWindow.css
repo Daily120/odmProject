@@ -35,8 +35,9 @@
 }
 
 .ChatWindow{
+  position: relative;
   border-left: 1px solid grey;
-  height: 94vh;
+  height: inherit;
   padding-left: 1%;
 }
 
