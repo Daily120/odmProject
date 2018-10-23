@@ -1,0 +1,84 @@
+.navigation {
+    list-style: none;
+    margin: 0;
+    background: #282c34;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.navigation a:hover {
+    background: #00b7f5;
+}
+
+.mennenger {
+    padding-left: 12px;
+    padding-top: 27px;
+    position: absolute;
+    cursor: default;
+    text-decoration: none;
+    color: bisque;
+    font-size: 30px;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+#App-logo-spin {
+    animation: App-logo-spin infinite 1.5s linear;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#App-logo-spin {
+    border-radius: 50%;
+    box-shadow: 0 -5px 0 #3adbfd;
+    border: 5px solid #1a394f;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: -100px 0 0 0;
+    top: 200px;
+    left: 50%;
+}
