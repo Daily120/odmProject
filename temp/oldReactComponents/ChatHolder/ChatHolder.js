@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ChatHolder.css';
 import ChatWindow from '../ChatWindow/ChatWindow';
 import ChatLineList from '../ChatLineList/ChatLineList';
-import logo from '../ChatLine/pzl11.png';
+import logo from '../ChatLine/favicon.ico';
 import face from '../ChatLine/face.png';
 import postmal from '../ChatLine/postmal.png';
 

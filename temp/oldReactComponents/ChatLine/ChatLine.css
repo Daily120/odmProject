@@ -1,0 +1,52 @@
+.ChatLineBox {
+    position: relative;
+    height: 62px;
+    width: 310px;
+    border: solid gray;
+    border-top: 0px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.ChatLineBox:hover {
+    background-color: #dcdfe5;
+}
+
+img {
+    border-radius: 30%;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 5px;
+}
+
+.ChatName {
+    font-size: 13px;
+    color: black;
+    float: left;
+    margin: 5px 15px;
+    margin-bottom: 3px;
+}
+
+.lastMessage {
+    position: absolute;
+    margin-left: 60px;
+    text-align: left;
+    top: 25px;
+    font-size: 13px;
+    color: teal;
+    width: fit-content;
+    height: 20px;
+}
+
+.circle {
+    position: absolute;
+	border-radius: 50%;
+	width: 7px;
+    height: 7px;
+    background-color: blueviolet;
+    float: right;
+    right: 10px;
+    bottom: 43%;
+}
