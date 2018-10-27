@@ -1,0 +1,28 @@
+@font-face {
+    font-family: RedDeadRedemption;
+    src: url(./reddead.woff);
+}
+
+.imageHolder img {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    border-top-right-radius: 25px;
+    bottom: 37px;
+}
+
+.wikiInfo {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.wikiInfo p {
+    font-family: RedDeadRedemption;
+    color: rgb(221, 24, 24);
+    position: relative;
+    top: 100px;
+    font-size: 1.3vmax;
+}
+

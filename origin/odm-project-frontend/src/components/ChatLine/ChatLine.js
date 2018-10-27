@@ -1,9 +1,9 @@
 import React from 'react';
 import './ChatLine.css';
 
-const ChatLine = ({ chatName, chatImage, lastMessage, unreadedMessage }) => {
+const ChatLine = ({ id, chatName, chatImage, lastMessage, unreadedMessage, changeWikiPageState }) => {
     return (
-        <div className="ChatLineBox">
+        <div className="ChatLineBox" onClick={() => changeWikiPageState(id)}>
             <img src={chatImage} alt="bot"/>
             <div className="ChatName">{chatName}</div><br/>
             <div className="lastMessage">{lastMessage}</div>

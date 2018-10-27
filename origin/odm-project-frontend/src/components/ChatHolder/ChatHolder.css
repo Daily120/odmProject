@@ -10,7 +10,7 @@
     width: 315px;
     background-color: aqua;
     margin-left: 150px;
-    height: 439px;
+    height: 740px;
     border-radius: 25px;
 }
 
@@ -21,13 +21,10 @@
 
 .secondcol {
     width: 75%;
-    background-color: #282c34;
+    background: center no-repeat;
+    background-size: cover;    
     margin-right: 150px;
     margin-left: 10px;
-    height: 400px;
-    background-image: url('img/doshik.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 25px;
+    height: 740px;
+    border-radius: 25px; 
 }
