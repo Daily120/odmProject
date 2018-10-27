@@ -1,27 +1,40 @@
 import React, { Component } from 'react';
 import './ChatHolder.css';
 import ChatWindow from '../ChatWindow/ChatWindow';
+import WikiPage from '../WikiPage/WikiPage';
 import ChatLineList from '../ChatLineList/ChatLineList';
-import logo from '../ChatLine/favicon.ico';
-import face from '../ChatLine/face.png';
-import postmal from '../ChatLine/postmal.png';
+import logo from '../ChatLine/pzl11.png';
+import data from '../../data';
 
 class ChatHolder extends Component {
     constructor() {
         super();
-        this.chat = [{chatName: "Your Chat Bot", chatImage: logo, lastMessage: "Hello, how are you?", unreadedMessage: true},
-                  {chatName: "Face", chatImage: face, lastMessage: "Я выпустил новый альбом. Эш...", unreadedMessage: true},
-                  {chatName: "Post Malone", chatImage: postmal, lastMessage: "Listen to my new single!", unreadedMessage: true}]
+        this.state = {
+            chatLineList: data.map(item => ({
+                chatName: item.name,
+                chatImage: item.image,
+                lastMessage: item.messageBody.substring(0, 37) + "..."
+            })),
+            wikiPage: data[0]
+        };
+    }
+
+    changeWikiPageState = (id) => {
+        this.setState(prevState => ({
+            ...prevState.chatLineList,
+            wikiPage: data[id]
+        }))
     }
 
     render() {
         return (
             <div className="column">
                 <div className="firstcol">
-                    <ChatLineList chatList={this.chat} />
+                    <ChatLineList chatList={this.state.chatLineList} changeWikiPageState={this.changeWikiPageState}/>
                 </div>
-                <div className="secondcol">
-                    <ChatWindow />
+                <div className="secondcol" style={{backgroundImage: `url(${this.state.wikiPage.backgoundImage})`}}>
+                    {/* <ChatWindow /> */}
+                    <WikiPage data={this.state.wikiPage}/>
                 </div>
             </div>
         )
