@@ -4,11 +4,11 @@ import './Bootsrap.css';
 
 const Signin = () => {
     return (
-        <div class="signinContaier">
-                <div class="logged-out env-production page-responsive min-width-0 session-authentication">
-                    <div class="header header-logged-out width-full pt-5 pb-4" role="banner">
-                        <div class="container clearfix width-full text-center">
-                            <a class="header-logo" href="http://localhost:3000" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+        <div className="signinContaier">
+                <div className="logged-out env-production page-responsive min-width-0 session-authentication">
+                    <div className="header header-logged-out width-full pt-5 pb-4" role="banner">
+                        <div className="container clearfix width-full text-center">
+                            <a className="header-logo" href="http://localhost:3000" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
                                 <svg version="1.1" height="48" width="48" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                     xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 209.32 209.32" style={{enableBackground:'new 0 0 209.32 209.32'}}
                                     xmlSpace="preserve">
@@ -58,50 +58,50 @@ const Signin = () => {
                     </div>
 
 
-                    <div id="start-of-content" class="show-on-focus"></div>
+                    <div id="start-of-content" className="show-on-focus"></div>
 
 
 
-                    <div role="main" class="application-main ">
+                    <div role="main" className="application-main ">
 
                         <div id="js-pjax-container" data-pjax-container>
 
 
-                            <div class="auth-form px-3" id="login">
-                                <form action="/session" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input
+                            <div className="auth-form px-3" id="login">
+                                <form action="/session" acceptCharset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input
                                         type="hidden" name="authenticity_token" value="EcvGaZz2YBQH401KXEd+gtbvLqupvL7kBjcSQTnTd/egHcpUuuoCFw6b7PLJ3b/9wBx967sWQEtmOaRg2nKlow==" />
-                                    <div class="auth-form-header p-0">
+                                    <div className="auth-form-header p-0">
                                         <h1>Sign in to Mennenger</h1>
                                     </div>
 
 
-                                    <div class="auth-form-body mt-3">
+                                    <div className="auth-form-body mt-3">
 
-                                        <label for="login_field">
+                                        <label htmlFor="login_field">
                                             Username or email address
                                         </label>
-                                        <input type="text" name="login" id="login_field" class="form-control input-block" tabindex="1"
-                                            autocapitalize="off" autocorrect="off" autofocus="autofocus" />
+                                        <input type="text" name="login" id="login_field" className="form-control input-block" tabIndex="1"
+                                            autoCapitalize="off" autoCorrect="off" autoFocus="autofocus" />
 
-                                        <label for="password">
-                                            Password <a class="label-link" href="/password_reset">Forgot password?</a>
+                                        <label htmlFor="password">
+                                            Password <a className="label-link" href="/password_reset">Forgot password?</a>
                                         </label>
-                                        <input type="password" name="password" id="password" class="form-control form-control input-block"
-                                            tabindex="2" />
+                                        <input type="password" name="password" id="password" className="form-control form-control input-block"
+                                            tabIndex="2" />
 
-                                        <input type="submit" name="commit" value="Sign in" tabindex="3" class="btn btn-primary btn-block"
+                                        <input type="submit" name="commit" value="Sign in" tabIndex="3" className="btn btn-primary btn-block"
                                             data-disable-with="Signing in…" />
                                     </div>
                                 </form>
 
-                                <p class="create-account-callout mt-3">
+                                <p className="create-account-callout mt-3">
                                     New to Mennenger?
                                     <a data-ga-click="Sign in, switch to sign up" href="/join?source=login">Create an account</a>.
                                 </p>
                             </div>
 
                         </div>
-                        <div class="modal-backdrop js-touch-events"></div>
+                        <div className="modal-backdrop js-touch-events"></div>
                     </div>
                 </div>
             </div>

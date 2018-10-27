@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SideBar from './components/SideBar/SideBar';
 import ChatHolder from './components/ChatHolder/ChatHolder';
 import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class App extends Component {
         <div id="welcomeMessage">Hello</div>
         <img src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" alt="sssss"/> */}
         <Signin />
+        <Register />
       </div>
     );
   }
