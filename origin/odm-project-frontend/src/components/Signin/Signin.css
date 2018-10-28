@@ -1,3 +1,43 @@
+.session-authentication .flash {
+    padding: 15px 20px;
+    margin: 0 auto;
+        margin-bottom: 0px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.flash-error {
+    color: #86181d;
+    background-color: #ffdce0;
+    border-color: rgba(27,31,35,0.15);
+    cursor: text;
+}
+
+.session-authentication .flash .flash-close {
+    height: 40px;
+}
+
+.flash-close {
+    float: right;
+    padding: 16px;
+    margin: -16px;
+    color: inherit;
+    text-align: center;
+    background: none;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0.6;
+}
+
+.flash-close:hover {
+    color: #3b0607;
+}
+
 .modal-backdrop {
     display: none;
     -webkit-user-select: none;
