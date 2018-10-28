@@ -1,19 +1,7 @@
-
-.App-header {
-  background-color: #282c34;
-  /* background-color: #1f0; */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-#welcomeMessage {
-  font-size: 55px;
-}
-
-#welcomeMessage:hover {
-  cursor: default;
-  color: transparent;
+.johntrav {
+  position: absolute;
+  top: 50%;
+  left: -82px;
+  width: 100px;
+  height: 100px;
 }

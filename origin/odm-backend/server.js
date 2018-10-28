@@ -73,6 +73,30 @@ app.post('/register', (req, res) => {
     .catch(err => res.status(400).json('unable to register'))
 })
 
+app.post('/sendmessage', (req, res) => {
+    console.log(req.body);
+    const { from_user, to_user, messageBody } = req.body;
+    if (!from_user || !to_user || !messageBody) {
+        return res.status(400).json('incorrect request');
+    }
+
+    db.insert({
+        from_user: from_user,
+        to_user: to_user,
+        message: messageBody,
+        time: new Date()
+    }).into('messages').returning('*')
+    .then(message => res.json(message[0]))
+    .catch(err => res.status(400).json('Unexpected error!'))
+})
+
+app.get('/usermessages/:id', (req, res) => {
+    const { id } = req.params;
+    db.select('*').from('messages').where({from_user: id}).orWhere('to_user', '=', id)
+        .then(messageArray => messageArray[0] ? res.json(messageArray) : res.status(400).json('No messages'))
+        .catch(err => res.status(400).json('error getting user messages'))
+})
+
 app.listen(3001, () => {
     console.log('app is running on port 3001');
 })
