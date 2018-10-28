@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './App.css';
 import SideBar from './components/SideBar/SideBar';
 import ChatHolder from './components/ChatHolder/ChatHolder';
 import Signin from './components/Signin/Signin';
@@ -32,11 +32,12 @@ class App extends Component {
   render() {
     return (
       <div className="App App-header">
-        {this.state.isSignIn ? 
+        <SideBar />
         <ChatHolder></ChatHolder>
-          :
-        <HomePageCards onRegisterUser={this.onRegisterUser} onSignInUser={this.onSignInUser}/>
-        }
+        <img className="johntrav" src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" alt="sssss"/>
+        {/* <Signin />
+        <Register />
+        <HomePageCards /> */}
       </div>
     );
   }
