@@ -10,8 +10,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      isSignIn: false,
+      user: {}
     }
+  }
+
+  onRegisterUser = (userData) => {
+    this.setState({
+      isSignIn: true,
+      user: userData
+    })
+  }
+
+  onSignInUser = (userData) => {
+    this.setState({
+      isSignIn: true,
+      user: userData
+    })
   }
   
   render() {
