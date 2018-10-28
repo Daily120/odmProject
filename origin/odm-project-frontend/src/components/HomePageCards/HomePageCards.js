@@ -5,17 +5,17 @@ import Signin from '../Signin/Signin';
 import image from './img/aircraft.jpg';
 import airplane from './img/secondair.jpg';
 
-const HomePageCards = () => {
+const HomePageCards = ({ onRegisterUser, onSignInUser }) => {
     return (
         <div className="homePageCardsBody">
             <h1 className="flyboy"> Hey flyboy! Glad to see you here </h1>
             <div className="wrapper">
 
                 <div className="card" id="c0">
-                    <Signin />
+                    <Signin onSignInUser={onSignInUser}/>
                 </div>
                 <div className="card" id="c1">
-                    <Register />
+                    <Register onRegisterUser={onRegisterUser}/>
                 </div>
                 <div className="card" id="c2">
                     <div className="aircraft" id="i2">

@@ -1,7 +1,30 @@
 import React from 'react';
 import './Register.css';
 
-const Signin = () => {
+const Register = ({ onRegisterUser }) => {
+
+    const onRegisterClick = () => {
+        const login = document.getElementById("user[login]").value;
+        const email = document.getElementById("user[email]").value;
+        const password = document.getElementById("user[password]").value;
+        
+        fetch('http://localhost:3001/register', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                email: email,
+                password: password,
+                name: login
+            })
+            })
+            .then(response => response.json())
+            .then(user => {
+                if (user.id) {
+                    onRegisterUser(user);
+                }
+            })
+    }
+
     return (
         <div className="registerContaier">
             <div className="mx-auto hide-sm">
@@ -40,7 +63,7 @@ const Signin = () => {
                                 including a number, and a lowercase letter.</p>
                         </dl>
 
-                        <button className="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block" type="submit" data-ga-click="Signup, Attempt, location:teams;">Sign
+                        <button onClick={onRegisterClick} className="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block" type="button" data-ga-click="Signup, Attempt, location:teams;">Sign
                             up for Mennenger</button>
                     </form>
                 </div>
@@ -49,4 +72,4 @@ const Signin = () => {
     )
 }
 
-export default Signin;
+export default Register;

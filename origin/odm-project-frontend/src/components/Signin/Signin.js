@@ -2,7 +2,28 @@ import React from 'react';
 import './Signin.css';
 import './Bootsrap.css';
 
-const Signin = () => {
+const Signin = ({ onSignInUser }) => {
+
+    const onSignInClick = () => {
+        const login = document.getElementById("login_field").value;
+        const password = document.getElementById("password_field").value;
+
+        fetch('http://localhost:3001/signin', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                email: login,
+                password: password
+            })
+        })
+        .then(response => response.json())
+        .then(user => {
+            if (user.id) {
+                onSignInUser(user);
+            }
+        })
+    }
+
     return (
         <div className="signinContaier">
                 <div className="logged-out env-production page-responsive min-width-0 session-authentication">
@@ -78,7 +99,7 @@ const Signin = () => {
                                     <div className="auth-form-body mt-3">
 
                                         <label htmlFor="login_field">
-                                            Username or email address
+                                            Your email address
                                         </label>
                                         <input type="text" name="login" id="login_field" className="form-control input-block" tabIndex="1"
                                             autoCapitalize="off" autoCorrect="off" autoFocus="autofocus" />
@@ -86,10 +107,10 @@ const Signin = () => {
                                         <label htmlFor="password">
                                             Password <a className="label-link" href="/password_reset">Forgot password?</a>
                                         </label>
-                                        <input type="password" name="password" id="password" className="form-control form-control input-block"
+                                        <input type="password" name="password" id="password_field" className="form-control form-control input-block"
                                             tabIndex="2" />
 
-                                        <input type="submit" name="commit" value="Sign in" tabIndex="3" className="btn btn-primary btn-block"
+                                        <input onClick={onSignInClick} type="button" name="commit" value="Sign in" tabIndex="3" className="btn btn-primary btn-block"
                                             data-disable-with="Signing in…" />
                                     </div>
                                 </form>
