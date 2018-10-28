@@ -10,20 +10,33 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      isSignIn: false,
+      user: {}
     }
+  }
+
+  onRegisterUser = (userData) => {
+    this.setState({
+      isSignIn: true,
+      user: userData
+    })
+  }
+
+  onSignInUser = (userData) => {
+    this.setState({
+      isSignIn: true,
+      user: userData
+    })
   }
   
   render() {
     return (
       <div className="App App-header">
-        {/* <SideBar />
+        {this.state.isSignIn ? 
         <ChatHolder></ChatHolder>
-        <div id="welcomeMessage">Hello</div>
-        <img src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" alt="sssss"/> */}
-        {/* <Signin />
-        <Register /> */}
-        <HomePageCards />
+          :
+        <HomePageCards onRegisterUser={this.onRegisterUser} onSignInUser={this.onSignInUser}/>
+        }
       </div>
     );
   }

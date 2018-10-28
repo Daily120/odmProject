@@ -2,7 +2,30 @@ import React from 'react';
 import './Signin.css';
 import './Bootsrap.css';
 
-const Signin = () => {
+const Signin = ({ onSignInUser }) => {
+
+    const onSignInClick = () => {
+        const login = document.getElementById("login_field").value;
+        const password = document.getElementById("password_field").value;
+
+        fetch('http://localhost:3001/signin', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                email: login,
+                password: password
+            })
+        })
+        .then(response => response.json())
+        .then(user => {
+            if (user.id) {
+                onSignInUser(user);
+            } else {
+                document.getElementById('js-flash-container').hidden = false;
+            }
+        })
+    }
+
     return (
         <div className="signinContaier">
                 <div className="logged-out env-production page-responsive min-width-0 session-authentication">
@@ -74,11 +97,23 @@ const Signin = () => {
                                         <h1>Sign in to Mennenger</h1>
                                     </div>
 
+                                    <div hidden={true} id="js-flash-container">
 
+
+                                        <div class="flash flash-full flash-error">
+                                            <div class="container">
+                                            <button onClick={() => document.getElementById('js-flash-container').hidden = true} class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+                                                <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
+                                            </button>
+                                            Incorrect email or password.
+
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className="auth-form-body mt-3">
 
                                         <label htmlFor="login_field">
-                                            Username or email address
+                                            Your email address
                                         </label>
                                         <input type="text" name="login" id="login_field" className="form-control input-block" tabIndex="1"
                                             autoCapitalize="off" autoCorrect="off" autoFocus="autofocus" />
@@ -86,10 +121,10 @@ const Signin = () => {
                                         <label htmlFor="password">
                                             Password <a className="label-link" href="/password_reset">Forgot password?</a>
                                         </label>
-                                        <input type="password" name="password" id="password" className="form-control form-control input-block"
+                                        <input type="password" name="password" id="password_field" className="form-control form-control input-block"
                                             tabIndex="2" />
 
-                                        <input type="submit" name="commit" value="Sign in" tabIndex="3" className="btn btn-primary btn-block"
+                                        <input onClick={onSignInClick} type="button" name="commit" value="Sign in" tabIndex="3" className="btn btn-primary btn-block"
                                             data-disable-with="Signing in…" />
                                     </div>
                                 </form>
