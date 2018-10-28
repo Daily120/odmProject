@@ -7,7 +7,7 @@ import image from './img/aircraft.jpg';
 const HomePageCards = ({ onRegisterUser, onSignInUser }) => {
     return (
         <div className="homePageCardsBody">
-            <h1 className="flyboy"> Hey flyboy! Glad to see you here </h1>
+            <h1 className="flyboy"> Hey, flyboy! Glad to see you here </h1>
             <div className="wrapper">
 
                 <div className="card" id="c0">
