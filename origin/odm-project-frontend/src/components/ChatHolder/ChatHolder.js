@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './ChatHolder.css';
-import ChatWindow from '../ChatWindow/ChatWindow';
 import WikiPage from '../WikiPage/WikiPage';
 import ChatLineList from '../ChatLineList/ChatLineList';
-import logo from '../ChatLine/pzl11.png';
 import data from '../../data';
 
 class ChatHolder extends Component {

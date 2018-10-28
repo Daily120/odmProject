@@ -3,7 +3,6 @@ import './HomePageCards.css';
 import Register from '../Register/Register';
 import Signin from '../Signin/Signin';
 import image from './img/aircraft.jpg';
-import airplane from './img/secondair.jpg';
 
 const HomePageCards = ({ onRegisterUser, onSignInUser }) => {
     return (

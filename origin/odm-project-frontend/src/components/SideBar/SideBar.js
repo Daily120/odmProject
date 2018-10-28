@@ -1,6 +1,5 @@
 import React from 'react';
 import './SideBar.css';
-import image from './img/asdf.jpg';
 import './animate.css';
 
 const bounce = () => {
@@ -10,14 +9,14 @@ const bounce = () => {
     element.classList.toggle('bounce');
 }
 
-const SideBar = () => {
+const SideBar = ({ userName, onLogOut }) => {
     return (
         <div>
             <div>
-                <a className="mennenger" onMouseEnter={bounce} onMouseLeave={bounce} href="">Mennenger</a>
+                <a className="mennenger" onMouseEnter={bounce} onMouseLeave={bounce}>Mennenger</a>
                 <ul className="navigation">
-                    <li>Hello, "Username"</li>
-                    <li><a href="#">Log Out</a></li>
+                    <li>{`Hello, ${userName}`}</li>
+                    <li><a onClick={onLogOut} style={{cursor: 'pointer'}}>Log Out</a></li>
                 </ul>
             </div>
         </div>
