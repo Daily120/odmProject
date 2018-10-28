@@ -28,8 +28,12 @@
     position: absolute;
     cursor: default;
     text-decoration: none;
-    color: bisque;
+    color:rgb(221, 24, 24);
     font-size: 30px;
+}
+
+.mennenger:hover {
+    text-decoration: none;
 }
 
 @media all and (max-width: 800px) {
