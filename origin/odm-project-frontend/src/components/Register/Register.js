@@ -4,7 +4,7 @@ import './Register.css';
 const Signin = () => {
     return (
         <div className="registerContaier">
-            <div className="mx-auto col-sm-8 col-md-5 hide-sm">
+            <div className="mx-auto hide-sm">
                 <div className="rounded-1 text-gray bg-gray-light py-4 px-4 px-md-3 px-lg-4">
                     <form className="home-hero-signup js-signup-form" autoComplete="off" acceptCharset="UTF-8" method="post">
                         <dl className="form-group mt-0" >
@@ -41,7 +41,7 @@ const Signin = () => {
                         </dl>
 
                         <button className="btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block" type="submit" data-ga-click="Signup, Attempt, location:teams;">Sign
-                            up for GitHub</button>
+                            up for Mennenger</button>
                     </form>
                 </div>
             </div>

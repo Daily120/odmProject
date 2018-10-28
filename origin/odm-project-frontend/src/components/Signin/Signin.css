@@ -564,8 +564,9 @@ body.full-width-p-0 .tabnav-pr .tabnav-tabs {
 }
 
 .auth-form {
-    width: 340px;
-    margin: 0 auto
+    position: relative;
+    height: 345px;
+    top: 65px;
 }
 
 .auth-form .form-group.warn .warning,
@@ -759,7 +760,9 @@ body.full-width-p-0 .tabnav-pr .tabnav-tabs {
 .session-authentication .auth-form-header h1 {
     font-size: 24px;
     font-weight: 300;
-    letter-spacing: -0.5px
+    letter-spacing: -0.5px;
+    margin-top: 100px;
+    margin-right: 180px;
 }
 
 .session-authentication .auth-form-body {

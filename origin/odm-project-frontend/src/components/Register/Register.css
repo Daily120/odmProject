@@ -76,3 +76,7 @@
     padding: 20px 32px;
     font-size: 16px
 }
+
+registerContaier {
+    height: 100%;
+}

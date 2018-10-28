@@ -67,7 +67,7 @@ const Signin = () => {
                         <div id="js-pjax-container" data-pjax-container>
 
 
-                            <div className="auth-form px-3" id="login">
+                            <div className="auth-form" id="login">
                                 <form action="/session" acceptCharset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input
                                         type="hidden" name="authenticity_token" value="EcvGaZz2YBQH401KXEd+gtbvLqupvL7kBjcSQTnTd/egHcpUuuoCFw6b7PLJ3b/9wBx967sWQEtmOaRg2nKlow==" />
                                     <div className="auth-form-header p-0">
@@ -94,10 +94,6 @@ const Signin = () => {
                                     </div>
                                 </form>
 
-                                <p className="create-account-callout mt-3">
-                                    New to Mennenger?
-                                    <a data-ga-click="Sign in, switch to sign up" href="/join?source=login">Create an account</a>.
-                                </p>
                             </div>
 
                         </div>
